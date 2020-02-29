@@ -2,9 +2,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
 const mongodb = process.env.MONGODB;
-
+var cors = require('cors');
 const postRoutes = require('./routes/api_route');
-
+app.use(cors()) ;
 app.use(express.urlencoded({
     extended: false
 }));
